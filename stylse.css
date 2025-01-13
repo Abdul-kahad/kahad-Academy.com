@@ -1,0 +1,686 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(41, 87, 240,1);
+  height: 70px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu ul,
+.signinup ul{
+  display: flex;
+  list-style-type: none;
+}
+
+.h-link,
+.signinup ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  margin: 0 16px;
+}
+
+.logo{
+  font-weight: 600;
+}
+
+.logo:hover{
+  color: rgba(0,0, 0,0.7);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.active{
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+}
+
+.h-link:hover{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 2px;
+  transition: 0.05s ;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login,
+.register{
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.login:hover,
+.register:hover{
+  background-color: white;
+  color: rgba(41, 87, 240,1);
+  transition: 0.15s;
+}
+
+.submenu .sublinks{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.ab .submenu,
+.ad .submenu,
+.ac .submenu,
+.st .submenu,
+.ne .submenu,
+.co .submenu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.sublinks{
+  position:absolute;
+  margin-top: 30px;
+  background-color: rgb(119, 178, 245);
+  top: -4px;
+}
+
+.sublinks li a{
+  text-decoration: none;
+  text-wrap: nowrap;
+  line-height: 40px;
+  color: black;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.301);
+}
+
+.ab:hover .submenu,
+.ad:hover .submenu,
+.ac:hover .submenu,
+.st:hover .submenu,
+.ne:hover .submenu,
+.co:hover .submenu{
+  opacity: 1;
+}
+
+
+/* MAIN */
+
+.h-image{
+  width: 1339px;
+}
+
+.carosel{
+  position: relative;
+}
+
+.text{
+  position: absolute;
+  z-index: 1;
+  margin-top: -400px;
+  margin-left: 80px;
+}
+
+.admission-open{
+  margin: 20px 0;
+  font-size: 50px;
+  display: block;
+  background-color: green;
+  padding: 5px 20px;
+  color: aliceblue;
+  border: 1px solid white;
+}
+
+.ad-yr{
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: white;
+}
+
+.check-btn{
+  background-color: rgb(0, 0, 255);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 50px;
+  color: aliceblue;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.check-btn:hover{
+  background-color: aliceblue;
+  color: black;
+  transition: 0.5s;
+}
+
+.sec{
+  position:absolute;
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  margin-top: -450px;
+  margin-left: 700px;
+}
+
+.admission{
+  width: 259px;
+  height: 309px;
+}
+
+.calender{
+  margin-right: 50px;
+}
+
+.cal,
+.admission{
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.adm{
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 30px;
+  font-size: 38px;
+  font-weight: bold;
+  color: rgb(0, 174, 255);
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+.bar{
+  background-color: rgb(27, 27, 233);
+  height: 200px;
+  margin-top: -4px;
+  position: relative;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.admission-list{
+  color: white;
+  width: 400px;
+}
+
+.info{
+  margin: 10px 0;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(123, 255, 0);
+}
+
+a:hover{
+  color: black;
+}
+
+.welcome{
+ background-color: aliceblue;
+ height: 450px;
+ display: flex;
+}
+.src{
+  width: 350px;
+}
+
+.message{
+ flex: 1;
+ margin-top: 25px;
+ margin-left: 80px;
+ display: flex;
+ flex-direction: column;
+}
+
+.message a{
+  margin-top: 20px;
+}
+
+.slider{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.s{
+  position: absolute;
+  left: 66px;
+  bottom: 60px;
+  font-size: 30px;
+  color: white;
+}
+
+.slider img{
+  border-radius: 5px;
+  border: 3px solid rgb(0, 174, 255);
+}
+
+.key-links{
+  flex: 1;
+  margin-top: 25px;
+}
+
+.key-links h3,
+.message h3{
+  border-bottom: 3px solid black;
+  display: inline-block;
+  padding-bottom: 20px;
+  font-size: 30px;
+  color: blue;
+}
+
+.key-links ul{
+  margin-top: 30px;
+}
+
+.key-links ul li{
+  list-style-type: square;
+  padding: 20px 0;
+  color: black;
+}
+
+.key-links ul li a{
+  color: black;
+  border-bottom: 1px solid rgba(170, 168, 168, 0.486);
+}
+
+.key-links ul li a:hover{
+  color: chartreuse;
+}
+
+.msg{
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.ka-container{
+  height: 1000px;
+  background-color: rgb(214, 225, 235);
+  position: relative;
+
+}
+
+.kahad-academy{
+  background-color: white;
+  position: absolute;
+  margin: 70px 100px;
+  height: 860px;
+  width: 1150px;
+}
+
+.at{
+  color: green;
+}
+
+.ka-container .kahad-academy h2{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 35px;
+  color: blue;
+ 
+}
+
+.rop{
+  display: flex;
+  margin: 0 40px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  border-bottom: 1px solid rgb(194, 188, 188);
+  padding-bottom: 60px;
+}
+
+.rop div{
+  width: 340px;
+}
+
+.rop div h3{
+  color: blue;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.rop div p{
+  text-align: center;
+  line-height: 30px;
+}
+
+.courses{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.courses div ul{
+  list-style-type: square;
+  line-height: 60px;
+}
+
+.courses div ul li{
+  transition: 0.15s ease;
+}
+
+.courses div ul li:hover{
+  color: blue;
+}
+
+.widget{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.widget .r{
+  height: 60px;
+  background-color: rgb(53, 8, 158);
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: -10px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.widget .o{
+  font-weight: bolder;
+  font-size: 14px;
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: 5px solid rgba(216, 206, 206, 0.856) ;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget .p{
+  height: 60px;
+  background-color: rgb(30, 126, 17);
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -10px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.widget .r:hover,
+.widget .p:hover{
+  background-color: black;
+}
+
+.news-updates{
+  height: 850px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 690px;
+  margin-top: 25px;
+  box-shadow: 1px 1px 10px 1px rgba(38, 38, 39, 0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.news:hover{
+  box-shadow: 1px 1px 10px 1px rgba(38, 38, 39, 0.5);
+}
+
+.news div img{
+  width: 400px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.context,
+.news-date{
+  padding-left: 30px;
+  padding-right: 243px;
+}
+
+.news-title{
+  margin-top: 50px;
+  font-size: 20px;
+  width: 350px;
+  line-height: 30px;
+  color: blue;
+}
+
+.news-info{
+  width: 350px;
+  font-size: 14px;
+  margin-top: 30px;
+  line-height: 25px;
+  color: rgb(94, 93, 93);
+
+}
+
+.news-date{
+  font-size: 14px;
+  border-top: 1px solid  blue;
+  color: grey;
+  position: absolute;
+  bottom: 30px;
+  padding-top: 20px;
+}
+
+.n-u{
+  position: relative;
+  background-color: white;
+}
+
+.n-u h2{ 
+  font-size: 35px;
+  margin-left: 36px;
+  margin-top: 50px;
+  border-bottom: 3px solid green;
+  display: inline-block;
+  color: blue;
+  padding-bottom: 20px;
+  
+}
+
+.mn{
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  bottom: 50px;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+  
+}
+
+.mn:hover{
+  background-color: green;
+}
+
+.mn div{
+  font-size: 18px;
+  color: white;
+}
+
+.tooltip{
+  position: relative;
+}
+
+.tooltip div{
+  position: absolute;
+  z-index: 4;
+  color: white;
+  background-color: rgb(107, 107, 107);
+  padding: 5px 10px;
+  border-radius: 20px;
+  top: 20px;
+  left: 20px;
+  font-size: 15PX;
+}
+
+.p-numbers{
+  height: 500px;
+}
+
+.numbers{
+  height: 400px;
+  background-color: rgba(0, 0, 255, 0.9);
+  margin: 80px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+}
+
+.numbers .d{
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers div h1{
+  font-size: 50px;
+  color: white;
+}
+
+.numbers div h3{
+  padding: 15px 0;
+  color: white;
+  font-weight: 100;
+}
+
+.sudo{
+  height: 5px;
+  width: 50px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.sub-footer{
+  height: 440px;
+  background-color: blue;
+  position: relative;
+}
+
+.kaac{
+  font-size: 100px;
+  font-weight: 1000;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  color: rgba(255, 255, 255, 0.2);
+  
+}
+
+.caak{
+  position: absolute;
+  display: flex;
+  width: 1300px;
+  margin-top: -180px;
+  justify-content: space-evenly;
+}
+
+.contact-us h2,
+.about-us h2,
+.academics h2,
+.key-link h2{
+  color: white;
+  border-bottom: 2px solid greenyellow;
+  padding-bottom: 10px;
+}
+
+.icon{
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 30px;
+  color: white;
+}
+
+.contact-us p{
+  padding-top: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+.about-us ul,
+.academics ul,
+.key-link ul{
+  list-style-type: none;
+  line-height: 40px;
+}
+
+.about-us ul a,
+.academics ul a,
+.key-link ul a{
+  color: white;
+  transition: 0.15s;
+}
+
+.about-us ul a:hover,
+.academics ul a:hover,
+.key-link ul a:hover{
+  color: greenyellow;
+}
+
+.footer{
+  height: 50px;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(41, 40, 40);
+}
